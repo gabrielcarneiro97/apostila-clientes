@@ -1,0 +1,301 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage[brazil]{babel}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage[left=3cm, right=3cm, top=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage[table]{xcolor}
+\usepackage{color, colortbl}
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{setspace}
+
+\definecolor{lightGreen}{HTML}{60EB26}
+\definecolor{lightYellow}{HTML}{F7D800}
+\definecolor{darkGrey}{HTML}{6F7873}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\newcommand{\imagem}[2]{
+  \begin{center}
+    \includegraphics[width=#2\linewidth]{#1}
+  \end{center}
+}
+
+\newcommand{\imprimirtitulo}{}
+\newcommand{\titulo}[1]{\renewcommand{\imprimirtitulo}{#1}}
+
+\newcommand{\imprimirautor}{}
+\newcommand{\autor}[1]{\renewcommand{\imprimirautor}{#1}}
+
+\makeatletter
+\newcommand{\pretextual}{
+  \cleardoublepage
+  \pagenumbering{roman}
+}
+
+\newcommand{\textual}{
+  \cleardoublepage
+  \pagenumbering{arabic}
+}
+
+\newcommand{\postextual}{
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+}
+\makeatother
+
+\newcommand{\parte}[1]{
+  \pagebreak
+  \vfill
+  \partfont{\centering}
+  \vspace*{\fill}
+    \part{#1}    
+  \vspace*{\fill}
+  \vfill
+  \pagebreak
+}
+
+\titulo{Apostila Revenda}
+\autor{Andrea Arantes Contabilidade}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\imprimirtitulo}
+\rhead{\imprimirautor}
+\chead{\today}
+\rfoot{\thepage}
+
+\setlength{\parindent}{3em}
+\setlength{\parskip}{1em}
+
+\frenchspacing
+
+\begin{document}
+
+\singlespacing
+
+\pretextual
+
+\tableofcontents
+\cleardoublepage
+
+\textual
+
+\parte{Gestão NF-Stock}
+\section{Introdução}
+\label{sec:intro}
+
+Para que o sistema funcione adequadamente o responsável pela emissão das notas deverá entrar no NF-Stock pelo menos uma vez por semana para certificar-se que tudo está ok. Ele deve verificar as notas que ele enviou foram recepcionadas adequadamente, conferir se o sistema encontrou alguma nota de terceiros que ele não recebeu e fazer o envio das notas para o sistema. Além dessas funções básicas o usuário pode ainda verificar as notas de serviços que foram emitidas contra a empresa e ainda as notas de emissão própria. Ao longo desse manual todos esses procedimentos serão explicados.
+
+
+\section{Envio de Notas}
+\label{sec:envio-notas}
+
+\subsection{Envio de notas pelo site}
+\begin{enumerate}
+  \item Para enviar notas, primeiro selecione no menu lateral a aba "\textit{Sistema}" \ e depois clique no botão "\textit{Enviar Notas}". \imagem{menu-sistema.PNG}{.4}
+  \item Depois clique no botão "\textit{Adicionar Arquivos}". \imagem{botao-enviar.PNG}{.4}
+  \pagebreak
+  \item Na janela que foi aberta, selecione todos os arquivos XML das notas que foram emitidas e clique em "\textit{Abrir}". \imagem{selecionar-arquivos.PNG}{.6}
+  \item Clique em "\textit{Enviar Todos}" e espere até que a operação seja finalizada. \imagem{enviar-todos.PNG}{.6}
+  \item Agora as notas enviadas já devem estar na aba de "\textit{Notas Emitidas}", na seção \ref{sec:notas} você aprenderá a acessar as notas enviadas.
+\end{enumerate}
+
+\subsection{Envio de notas pelo e-mail}
+\begin{enumerate}
+  \item Anexar os XMLs em um e-mail.
+  \item Enviar para o email: \textit{nf@nfstock.com.br}.
+  \item As notas devem estar disponíveis no NF-Stock em até 24 horas.
+\end{enumerate}
+\textbf{OBS:} Alguns sistemas de emissão de ntoas fazem o envio automático dos XMLs para um e-mail configurado, caso seu sistema possua essa opção, o e-mail que deve ser cadastrado é o \textit{nf@nfstock.com.br}, consulte o suporte do seu sistema.
+\pagebreak
+\section{Consultar Notas}
+\label{sec:notas}
+
+\subsection{Emissão Própria}
+\begin{enumerate}
+  \item Para visualizar as notas que foram emitidas selecione o no menu lateral "\textit{NFe}" \ e depois clique no botão "\textit{Emitidas}". \imagem{menu-nfe.PNG}{.25}
+  \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfe-emit.PNG}{1}
+\end{enumerate}
+
+\subsection{Recebidas}
+\begin{enumerate}
+  \item Para visualizar as notas que foram recebidas selecione o no menu lateral "\textit{NFe}" \ e depois clique no botão "\textit{Recebidas}". \imagem{menu-nfe.PNG}{.25}
+  \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfe-rec.PNG}{1}
+\end{enumerate}
+
+\section{Consultar Serviços}
+As notas de serviços são puxadas automaticamente pelo sistema dependendo da cidade em que a empresa se encontra. O sistema consegue capturar automaticamente apenas as notas da empresa e de empresas que têm sede na mesma cidade. Logo, caso a empresa esteja localizada em Belo Horizonte, o sistema importará automaticamente as notas emitidas pela empresa e as notas de serviços tomados pela empresa de empresas que tenham sede em Belo Horizonte. Caso você não consiga visualizar suas notas de serviços, favor entrar em contato.
+\label{sec:prestados}
+
+\subsection{Prestados}
+\begin{enumerate}
+  \item Para visualizar as notas de serviços que foram prestados pela empresa selecione o no menu lateral "\textit{NFSe}" \ e depois clique no botão "\textit{Emitidas}". \imagem{menu-nfe.PNG}{.2}
+  \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfse-emit.PNG}{.9}
+\end{enumerate}
+
+\subsection{Tomados}
+\begin{enumerate}
+  \item Para visualizar as notas de serviços que foram prestados pela empresa selecione o no menu lateral "\textit{NFSe}" \ e depois clique no botão "\textit{Recebidas}". \imagem{menu-nfe.PNG}{.2}
+  \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfse-rec.PNG}{.9}
+\end{enumerate}
+
+\parte{Código NCM}
+
+\section{Tabela de NCMs}
+\begin{center}
+  \rowcolors{2}{gray!50}{gray!30}
+  \begin{longtable}{
+    |p{0.3\linewidth-2\tabcolsep}
+    |p{0.7\linewidth-2\tabcolsep}|
+  }
+    \hline
+    \rowcolor{darkGrey}
+    \textbf{NCM} & \textbf{DESCRIÇÃO} \\
+    87 & VEÍCULOS AUTOMÓVEIS, TRATORES, CICLOS E OUTROS VEÍCULOS TERRESTRES, SUAS PARTES E ACESSÓRIOS \\
+    87.01 & TRATORES (EXCETO OS CARROS-TRATORES DA POSIÇÃO 87.09). \\
+    8701.10.00 & Tratores de eixo único \\
+    8701.20.00 & Tratores rodoviários para semirreboques \\
+    8701.30.00 & Tratores de lagartas (esteiras) \\
+    8701.9 & OUTROS, COM UMA POTÊNCIA DE MOTOR: \\
+    8701.91.00 & Não superior a 18 kW \\
+    8701.92.00 & Superior a 18 kW, mas não superior a 37 kW \\
+    8701.93.00 & Superior a 37 kW, mas não superior a 75 kW \\
+    8701.94 & SUPERIOR A 75 KW, MAS NÃO SUPERIOR A 130 KW \\
+    8701.94.10 & Tratores especialmente concebidos para arrastar troncos (log skidders) \\
+    8701.94.90 & Outros \\
+    8701.95 & SUPERIOR A 130 KW \\
+    8701.95.10 & Tratores especialmente concebidos para arrastar troncos (log skidders) \\
+    8701.95.90 & Outros \\
+    87.02 & VEÍCULOS AUTOMÓVEIS PARA TRANSPORTE DE DEZ PESSOAS OU MAIS, INCLUINDO O MOTORISTA. \\
+    8702.10.00 & Unicamente com motor de pistão de ignição por compressão (diesel ou semidiesel) \\
+    8702.20.00 & Equipados para propulsão, simultaneamente, com um motor de pistão de ignição por compressão (diesel ou semidiesel) e um motor elétrico \\
+    8702.30.00 & Equipados para propulsão, simultaneamente, com um motor de pistão alternativo de ignição por centelha (faísca*) e um motor elétrico \\
+    8702.40 & UNICAMENTE COM MOTOR ELÉTRICO PARA PROPULSÃO \\
+    8702.40.10 & Trólebus \\
+    8702.40.90 & Outros \\
+    8702.90.00 & Outros \\
+    \rowcolor{lightGreen}
+    87.03 & AUTOMÓVEIS DE PASSAGEIROS E OUTROS VEÍCULOS AUTOMÓVEIS PRINCIPALMENTE CONCEBIDOS PARA TRANSPORTE DE PESSOAS (EXCETO OS DA POSIÇÃO 87.02), INCLUINDO OS VEÍCULOS DE USO MISTO (STATION WAGONS) E OS AUTOMÓVEIS DE CORRIDA. \\
+    8703.10.00 & Veículos especialmente concebidos para se deslocar sobre a neve; veículos especiais para transporte de pessoas nos campos de golfe e veículos semelhantes \\
+    \rowcolor{lightYellow}
+    8703.2 & OUTROS VEÍCULOS, UNICAMENTE COM MOTOR DE PISTÃO ALTERNATIVO DE IGNIÇÃO POR CENTELHA (FAÍSCA*): \\
+    8703.21.00 & De cilindrada não superior a 1.000 cm3 \\
+    \rowcolor{lightYellow}
+    8703.22 & DE CILINDRADA SUPERIOR A 1.000 CM3, MAS NÃO SUPERIOR A 1.500 CM3 \\ 
+    8703.22.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+    8703.22.90 & Outros \\
+    \rowcolor{lightYellow}
+    8703.23 & DE CILINDRADA SUPERIOR A 1.500 CM3, MAS NÃO SUPERIOR A 3.000 CM3 \\
+    \hline
+    \pagebreak
+    \hline
+    \rowcolor{darkGrey}
+    \textbf{NCM} & \textbf{DESCRIÇÃO} \\
+    8703.23.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+    8703.23.90 & Outros \\
+    \rowcolor{lightYellow}
+    8703.24 & DE CILINDRADA SUPERIOR A 3.000 CM3 \\
+    8703.24.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+    8703.24.90 & Outros \\
+    8703.3 & OUTROS VEÍCULOS, UNICAMENTE COM MOTOR DE PISTÃO DE IGNIÇÃO POR COMPRESSÃO (DIESEL OU SEMIDIESEL): \\
+    8703.31 & DE CILINDRADA NÃO SUPERIOR A 1.500 CM3 \\
+    8703.31.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+    8703.31.90 & Outros \\
+    8703.32 & DE CILINDRADA SUPERIOR A 1.500 CM3, MAS NÃO SUPERIOR A 2.500 CM3 \\
+    8703.32.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+    8703.32.90 & Outros \\
+    8703.33 & DE CILINDRADA SUPERIOR A 2.500 CM3 \\
+    8703.33.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+    8703.33.90 & Outros \\
+    8703.40.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão alternativo de ignição por centelha (faísca*) e um motor elétrico, exceto os suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+    8703.50.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão de ignição por compressão (diesel ou semidiesel) e um motor elétrico, exceto os suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+    8703.60.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão alternativo de ignição por centelha (faísca*) e um motor elétrico, suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+    8703.70.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão de ignição por compressão (diesel ou semidiesel) e um motor elétrico, suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+    8703.80.00 & Outros veículos, equipados unicamente com motor elétrico para propulsão \\
+    8703.90.00 & Outros \\
+    \hline
+  \end{longtable}
+\end{center}
+
+\parte{Resumo NF-e}
+\section{Tabela NF-e}
+\begin{center}
+  \begin{tabular}{
+    |P{0.14\linewidth-2\tabcolsep}
+    |P{0.14\linewidth-2\tabcolsep}
+    |P{0.14\linewidth-2\tabcolsep}
+    ||P{0.14\linewidth-2\tabcolsep}
+    |P{0.14\linewidth-2\tabcolsep}
+    |P{0.14\linewidth-2\tabcolsep}
+    |P{0.14\linewidth-2\tabcolsep}|}
+    \hline
+    \multicolumn{7}{|c|}{\textbf{QUADRO RESUMO DE EMISSÃO DE NOTA FISCAL}} \\
+    \hline\hline
+    \multicolumn{3}{|c||}{\textbf{ENTRADA}} & \multicolumn{4}{c|}{\textbf{SAÍDA}}\\
+    \hline
+    {\small Consignação} &
+    {\small Compra Definitiva} &
+    {\small Compra} &
+    {\small Devulução} &
+    {\small Venda} &
+    {\small Devolução simbólica} &
+    {\small Venda} \\
+    \hline
+    \cellcolor{lightYellow} {\small \textbf{CFOP 1.917}} &
+    \cellcolor{lightYellow} {\small \textbf{CFOP 1.113}} &
+    \cellcolor{lightYellow} {\small \textbf{CFOP 1.102}} &
+    \cellcolor{lightYellow} {\small \textbf{CFOP 5.918}} &
+    \cellcolor{lightGreen} {\scriptsize \textbf{CFOP 5.102/6.102}} &
+    \cellcolor{lightYellow} {\small \textbf{CFOP 5.919}} &
+    \cellcolor{lightGreen} {\scriptsize \textbf{CFOP 5.115/6.115}} \\
+    
+    \hline
+    {\small Consignação} &
+    {\tiny Compra Definitiva (Faturamento)} &
+    {\small Compra} &
+    {\small Devolução} &
+    {\small Venda} &
+    {\tiny Devolução SIMBÓLICA de Mercadoria Recebida em consignação} &
+    {\small Venda Recebida em Consignado} \\
+
+    \hline
+    {\small \textbf{CST: 041} (nacional)} &
+    {\small \textbf{CST: 041} (nacional)} &
+    {\small \textbf{CST: 041} (nacional)} &
+    {\small \textbf{CST: 041} (nacional)} &
+    {\small \textbf{CST: 020} (nacional)} &
+    {\small \textbf{CST: 041} (nacional)} &
+    {\small \textbf{CST: 020} (nacional)} \\
+
+    \hline
+    {\small CST (PIS e COFINS): \textbf{74}} &
+    {\small CST (PIS e COFINS): \textbf{74}} &
+    {\small CST (PIS e COFINS): \textbf{74}} &
+    {\small CST (PIS e COFINS): \textbf{08 (sem lucro)}} &
+    {\small CST (PIS e COFINS): \textbf{01 / 08 (sem lucro)}} &
+    {\small CST (PIS e COFINS): \textbf{08}} &
+    {\small CST (PIS e COFINS): \textbf{01 / 08 (sem lucro)}} \\
+
+    \hline
+    {\small *Adquirido de pessoa física} &
+    {\small *Adquirido de pessoa física} &
+    {\small *Adquirido de pessoa física} &
+    &
+    {\small \textbf{Destaque do ICMS} \par $Base * 72,22\% * 18\%$} &
+    {\tiny Nota fiscal emitida em função de VENDA de mercadoria recebida em CONSIGNAÇÃO pela NF-e nº (número e data da nota de entrada 1.917 – Esta nota terá sempre na data da venda, igual a data da venda 5.115)} &
+    {\small Adquirido de pessoa física} \\
+
+    \hline
+
+  \end{tabular}
+\end{center}
+\end{document}
