@@ -12,10 +12,14 @@
 \usepackage{calc}
 \usepackage{longtable}
 \usepackage{setspace}
+\usepackage{booktabs}
 
 \definecolor{lightGreen}{HTML}{60EB26}
 \definecolor{lightYellow}{HTML}{F7D800}
 \definecolor{darkGrey}{HTML}{6F7873}
+\definecolor{pink}{HTML}{CD38CF}
+\definecolor{cian}{HTML}{00CF8A}
+\definecolor{orange}{HTML}{EDA300}
 
 \newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -229,14 +233,16 @@ As notas de serviços são puxadas automaticamente pelo sistema dependendo da ci
 \parte{Resumo NF-e}
 \section{Tabela NF-e}
 \begin{center}
+  \addtolength{\leftskip} {-2cm}
+  \addtolength{\rightskip}{-2cm}
   \begin{tabular}{
-    |P{0.14\linewidth-2\tabcolsep}
-    |P{0.14\linewidth-2\tabcolsep}
-    |P{0.14\linewidth-2\tabcolsep}
-    ||P{0.14\linewidth-2\tabcolsep}
-    |P{0.14\linewidth-2\tabcolsep}
-    |P{0.14\linewidth-2\tabcolsep}
-    |P{0.14\linewidth-2\tabcolsep}|}
+    |P{0.18\linewidth-2\tabcolsep}
+    |P{0.18\linewidth-2\tabcolsep}
+    |P{0.18\linewidth-2\tabcolsep}
+    ||P{0.18\linewidth-2\tabcolsep}
+    |P{0.18\linewidth-2\tabcolsep}
+    |P{0.18\linewidth-2\tabcolsep}
+    |P{0.18\linewidth-2\tabcolsep}|}
     \hline
     \multicolumn{7}{|c|}{\textbf{QUADRO RESUMO DE EMISSÃO DE NOTA FISCAL}} \\
     \hline\hline
@@ -292,10 +298,74 @@ As notas de serviços são puxadas automaticamente pelo sistema dependendo da ci
     &
     {\small \textbf{Destaque do ICMS} \par $Base * 72,22\% * 18\%$} &
     {\tiny Nota fiscal emitida em função de VENDA de mercadoria recebida em CONSIGNAÇÃO pela NF-e nº (número e data da nota de entrada 1.917 – Esta nota terá sempre na data da venda, igual a data da venda 5.115)} &
-    {\small Adquirido de pessoa física} \\
+    {\small \textbf{Destaque do ICMS} \par $Base * 72,22\% * 18\%$} \\
 
     \hline
+    \cellcolor{pink} 1 &
+    \cellcolor{pink} 3 &
+    &
+    &
+    &
+    \cellcolor{pink} 2 &
+    \cellcolor{pink} 4 \\
 
+    \hline
+    &
+    &
+    \cellcolor{cian} 1 &
+    \cellcolor{cian} 2 &
+    &
+    &
+    \\
+
+    \hline
+    \cellcolor{orange} 1 &
+    &
+    &
+    \cellcolor{orange} 2 &
+    &
+    &
+    \\
+    \hline
   \end{tabular}
 \end{center}
+
+\addtolength{\leftskip} {-2cm}
+\addtolength{\rightskip}{-2cm}
+\begin{tabular}{
+  |P{0.3\linewidth-2\tabcolsep}
+  |P{0.7\linewidth-2\tabcolsep}|
+}
+
+  \hline
+
+  \multicolumn{2}{|c|}{\textbf{LEGENDA}} \\
+  \hline
+
+  \cellcolor{pink} Consignação &
+  Notas emitidas no caso de veículos consignados que foram posteriormente comprados pela empresa e então vendidos. \\
+  \hline
+
+  \cellcolor{cian} Compra/Venda &
+  Notas que devem ser emitidas no caso de veículos que entraram na empresa na forma inicial de COMPRA.\\    
+  \hline
+
+  \cellcolor{orange} Consignação/Devolução &
+  Notas que devem ser emitidas para os veículos que estavam consignados e foram devolvidos (não gerando negócio)\\
+  \hline
+
+  \cellcolor{lightYellow} &
+  Sem destaque de implostos \\
+  \hline
+
+  \cellcolor{lightGreen} &
+  Com destaque de implostos \\
+  \hline
+
+  \textbf{BASE DE CÁLCULO} &
+  \textit{Valor NF Saída - Valor NF Entrada} \\
+  \hline
+  
+
+\end{tabular}
 \end{document}
