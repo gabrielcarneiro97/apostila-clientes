@@ -15,6 +15,7 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{tcolorbox}
+\usepackage{amssymb}
 
 \definecolor{lightGreen}{HTML}{60EB26}
 \definecolor{lightYellow}{HTML}{F7D800}
@@ -63,18 +64,35 @@
 
 \newcommand{\parte}[1]{
   \pagebreak
-  \vfill
   \partfont{\centering}
+  \imagem{logo}{0.4}
   \vspace*{\fill}
-    \part{#1}    
+    \part{#1}
   \vspace*{\fill}
-  \vfill
   \pagebreak
 }
 \newcommand{\at}[1]{\textit{#1@andreacontabilidade.com}}
 
 \newcommand{\newemail}[1]{
   \expandafter\newcommand\csname email#1\endcsname{\at{#1}}
+}
+
+\newcommand{\capa}{
+  {\thispagestyle{empty}
+    \vspace*{\fill}
+    \begin{center}
+      \imagem{logo}{0.5}
+      {\Huge \textbf{Apostila de Instruções aos Clientes:}} 
+      \par\par
+      {\huge Revenda de Veículos}
+      \par\par
+    \end{center}
+    \vspace*{\fill}
+    \begin{center}
+      \today
+    \end{center}
+  }
+  \pagebreak
 }
 
 \newemail{andrea}
@@ -113,6 +131,7 @@
 \singlespacing
 
 \pretextual
+\capa
 
 \tableofcontents
 \cleardoublepage
@@ -596,28 +615,28 @@ Por isso, \textbf{No campo ICMS da nota fiscal, a aliquota que deve ser informad
     {\small \textbf{Destaque do ICMS} \par $Base * 72,22\% * 18\%$} \\
 
     \hline
-    \cellcolor{pink} 1 &
-    \cellcolor{pink} 3 &
     &
     &
+    \cellcolor{cian} 1 ($\bigcirc$) &
     &
-    \cellcolor{pink} 2 &
-    \cellcolor{pink} 4 \\
-
-    \hline
-    &
-    &
-    \cellcolor{cian} 1 &
-    &
-    \cellcolor{cian} 2 &
+    \cellcolor{cian} 2 ($\bigcirc$) &
     &
     \\
 
     \hline
-    \cellcolor{orange} 1 &
+    \cellcolor{pink} 1 ($\blacksquare$) &
+    \cellcolor{pink} 3 ($\blacksquare$) &
     &
     &
-    \cellcolor{orange} 2 &
+    &
+    \cellcolor{pink} 2 ($\blacksquare$) &
+    \cellcolor{pink} 4 ($\blacksquare$) \\
+
+    \hline
+    \cellcolor{orange} 1 ($\blacktriangle$) &
+    &
+    &
+    \cellcolor{orange} 2 ($\blacktriangle$) &
     &
     &
     \\
@@ -634,15 +653,15 @@ Por isso, \textbf{No campo ICMS da nota fiscal, a aliquota que deve ser informad
     \multicolumn{2}{|c|}{\textbf{LEGENDA}} \\
     \hline
   
-    \cellcolor{pink} Consignação &
+    \cellcolor{cian} Compra/Venda ($\bigcirc$) &
+    Notas que devem ser emitidas no caso de veículos que entraram na empresa na forma inicial de COMPRA.\\    
+    \hline
+
+    \cellcolor{pink} Consignação ($\blacksquare$) &
     Notas emitidas no caso de veículos consignados que foram posteriormente comprados pela empresa e então vendidos. \\
     \hline
   
-    \cellcolor{cian} Compra/Venda &
-    Notas que devem ser emitidas no caso de veículos que entraram na empresa na forma inicial de COMPRA.\\    
-    \hline
-  
-    \cellcolor{orange} Consignação/Devolução &
+    \cellcolor{orange} Consignação/Devolução ($\blacktriangle$) &
     Notas que devem ser emitidas para os veículos que estavam consignados e foram devolvidos (não gerando negócio)\\
     \hline
   
@@ -863,7 +882,7 @@ Recomendamos que a empresa sempre confira as notas de serviço que foram emitida
   
   \section{Consultar Serviços}
   \label{sec:servicos-nfstock}
-  As notas de serviços são puxadas automaticamente pelo sistema dependendo da cidade em que a empresa se encontra. O sistema consegue capturar automaticamente apenas as notas da empresa e de empresas que têm sede na mesma cidade. Logo, caso a empresa esteja localizada em Belo Horizonte, o sistema importará automaticamente as notas emitidas pela empresa e as notas de serviços tomados pela empresa de empresas que tenham sede em Belo Horizonte. Caso você não consiga visualizar suas notas de serviços, favor entrar em contato.
+  As notas de serviços são puxadas automaticamente pelo sistema dependendo da cidade em que a empresa se encontra. O sistema consegue capturar automaticamente apenas as notas do cliente e de empresas prestadoras de serviço que têm sede na mesma cidade. Logo, caso a empresa esteja localizada em Belo Horizonte, o sistema importará automaticamente as notas emitidas pela empresa e as notas de serviços tomados pela empresa de empresas que tenham sede em Belo Horizonte. Caso você não consiga visualizar suas notas de serviços, favor entrar em contato.
   
   \subsection{Prestados}
   \begin{enumerate}
@@ -890,8 +909,28 @@ Para emissão do certificado digital favor entrar em contato com a contabilidade
   \item Continue clicando em \itasp{Avançar} para finalizar o procedimento. Após isso o certificado estará disponível para o uso.
 \end{enumerate}
 
-\parte{Informações Úteis}
-\section{E-mails}
+\parte{Informações Complementares}
+\section{Data de Vencimento de Guias}
+\begin{center}
+  \rowcolors{2}{gray!50}{gray!30}
+  \begin{tabular}{|P{0.1\linewidth}|P{0.2\linewidth}|P{0.2\linewidth}|P{0.3\linewidth}|}
+    \hline
+    \rowcolor{darkGrey}
+    DIA & GUIA & ORGÃO & DESCRIÇÃO \\
+    \hline
+    até 20 & GPS & Previdência & Pagamento do INSS sobre a folha de pagamento dos empregados e do pró-labore dos sócios. \\
+    05 (prox) & ISSQN & Prefeitura & Tributação municipal: calculado sobre o faturamento mensal dos serviços prestados, aliquota conforme tabela de 2\% a 5\%. \\
+    até 07 & FGTS & Caixa & Fundo de Garantia dos empregados (8\% do salário bruto dos funcionários). \\
+    08 (prox) & DAE & Estado & ICMS: tributo pago sobre as vendas e circulação de mercadoria. \\
+    até 25 & DARF (8109/2172) & Receita Federal & Tributo Federal: calculado com base no faturamento mensal (PIS 0,65\% e COFINS 3\%). \\
+    {\small 31/01; 30/04; 31/07; 31/10} & DARF (2089/2372) & Receita Federal & Tributo Federal: calculado com base no faturamento mensal (IRPJ: 4,8\% ou 2,4\% e CSSL 2.88\% ou 1.08\%). \\
+    \hline
+
+  \end{tabular}
+\end{center}
+
+\pagebreak
+\section{E-mails Pessoal Escritório}
 \begin{itemize}
   \item Contadora: \emailandrea
   \item Financeiro: \emailabelardo
