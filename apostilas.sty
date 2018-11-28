@@ -1,0 +1,966 @@
+\usepackage{graphicx}
+\usepackage[brazil]{babel}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage[left=3cm, right=3cm, top=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage[table]{xcolor}
+\usepackage{color, colortbl}
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+
+\definecolor{lightGreen}{HTML}{60EB26}
+\definecolor{lightYellow}{HTML}{F7D800}
+\definecolor{darkGrey}{HTML}{6F7873}
+\definecolor{pink}{HTML}{CD38CF}
+\definecolor{cian}{HTML}{00CF8A}
+\definecolor{orange}{HTML}{EDA300}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+
+\newcommand{\asp}[1]{``#1''}
+
+\newcommand{\itasp}[1]{\textit{\asp{#1}}}
+
+\newcommand{\imagem}[2]{
+  \begin{center}
+    \includegraphics[width=#2\linewidth]{#1}
+  \end{center}
+}
+
+\newcommand{\imprimirtitulo}{}
+\newcommand{\titulo}[1]{\renewcommand{\imprimirtitulo}{#1}}
+
+\newcommand{\imprimirautor}{}
+\newcommand{\autor}[1]{\renewcommand{\imprimirautor}{#1}}
+
+\newcommand{\pretextual}{
+  \cleardoublepage
+  \pagenumbering{roman}
+}
+
+\newcommand{\textual}{
+  \cleardoublepage
+  \pagenumbering{arabic}
+}
+
+\newcommand{\postextual}{
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+}
+
+
+\newcommand{\parte}[1]{
+  \pagebreak
+  \partfont{\centering}
+  \imagem{logo}{0.4}
+  \vspace*{\fill}
+    \part{#1}
+  \vspace*{\fill}
+  \pagebreak
+}
+\newcommand{\at}[1]{\textit{#1@andreacontabilidade.com}}
+
+\newcommand{\newemail}[1]{
+  \expandafter\newcommand\csname email#1\endcsname{\at{#1}}
+}
+
+\newemail{andrea}
+\newemail{abelardo}
+\newemail{danielle}
+\newemail{natalia}
+\newemail{gabriel}
+\newemail{debora}
+\newemail{processos}
+\newcommand{\emailcontabilum}{\at{contabil1}}
+\newcommand{\emailcontabiltres}{\at{contabil3}}
+\newcommand{\emailcontabilquatro}{\at{contabil4}}
+\newcommand{\emailfiscalum}{\at{fiscal1}}
+\newcommand{\emailfiscaldois}{\at{fiscal2}}
+\newemail{arquivo}
+\newcommand{\emaildpum}{\at{dp1}}
+\newcommand{\emaildpdois}{\at{dp2}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\imprimirtitulo}
+\rhead{\imprimirautor}
+\chead{\today}
+\rfoot{\thepage}
+
+\setlength{\parindent}{3em}
+\setlength{\parskip}{1em}
+
+\frenchspacing
+
+\newcommand{\capa}{
+  {\thispagestyle{empty}
+    \vspace*{\fill}
+    \begin{center}
+      \imagem{logo}{0.5}
+      {\Huge \textbf{Apostila de Instruções aos Clientes:}} 
+      \par\par
+      {\huge Revenda de Veículos}
+      \par\par
+    \end{center}
+    \vspace*{\fill}
+    \begin{center}
+      \today
+    \end{center}
+  }
+  \pagebreak
+}
+
+\newcommand{\sumario}{
+  \tableofcontents
+  \cleardoublepage
+}
+
+\newcommand{\parteAdm}{
+  \parte{Instruções Administrativas}
+  \section{Envio Documentação Fiscal e Contabil}
+  \label{sec:doc-fin}
+  Toda a documentação financeira em nome da empresa deve ser encaminhada para a contabilidade. Faremos a triagem dos documentos e devolveremos os documentos dispensáveis. Segue uma lista com o momento em que os documentos deverão ser entregues:
+  \begin{itemize}
+    \item \textbf{Ao final do mês:}
+    \begin{itemize}
+      \item Envio de \textbf{TODAS} as Notas Fiscais emitidas pela empresa e recebidas de terceiros na compra de bens e de prestação de serviços.
+      \item Neste momento a contabilidade envia a folha de pagamento do pessoal e na mesma viagem pega as notas fiscais. Este movimento tem limite para ocorrer até o dia 03 do mês seguinte, por causa do prazo legal de pagamento de pessoal que é até o 5º dia útil do mês seguinte.
+    \end{itemize}
+    \item \textbf{Na entrega das guias:}
+    \begin{itemize}
+      \item A empresa deverá enviar para a contabilidade os documentos que foram pagos até aquele momento e que não haviam sido encaminhados no momento da primeira apanha.
+      \item A contabilidade entregará todas as guias devidas pela empresa em função do movimento do mês anterior. Este procedimento tem prazo limite o dia 08 do mês seguinte pois o ICMS vence no dia 08 do mês seguinte ao fato gerador do imposto.
+    \end{itemize}
+  \end{itemize}
+
+  \begin{tcolorbox}[title=Atenção!]
+    Caso alguma nota seja emitida ou recebida \textbf{após} o envio da documentação para a contabilidade é \textbf{imprescindível} o envio \textbf{imediato}, via e-mail, desses documentos, pois caso o documento seja recepcionado após o período de apuração dos impostos mensais, serão cobrados custos de retificação das obrigações acessórias. Todas as notas (de terceiros, entradas e serviços) precisam ser enviadas para a contabilidade no máximo até o dia 08 do mês seguinte.
+  \end{tcolorbox}
+
+  Informações sobre prazos e custos de retificação estão melhor detalhadas em nosso Contrato de Prestação de Serviços Contábeis, onde estão especificadas por setor.
+
+  \pagebreak
+  \section{Instruções Trabalhistas}
+  \label{sec:ins-trabs}
+  \subsection{Admissão}
+  \label{ins:adm}
+  Para realização da admissão é necessária a apresentação da CTPS (Carteira Trabalho e Previdência Social) pelo empregado e assim que ele for aprovado na seleção da empresa o mesmo deverá tirar o Atestado Médico Admissional (emitido por médico do trabalho e com o cargo correto para o qual o empregado está sendo admitido, bem como os dados da empresa).
+
+  A segunda providência é o preenchimento da ficha de admissão (CADASTRO DE EMPREGADOS), conforme modelo em anexo, em sua totalidade; boa parte das informações devem ser preenchidas pela empresa (jornada de trabalho, cargo, salário...)
+
+  \begin{tcolorbox}[title=Atenção!]
+    A partir de setembro de 2018 foi instituído o e-social isto significa que a admissão tem que ser feita \textbf{no dia anterior} ao dia em que o empregado começará a trabalhar, é obrigatório o  envio eletrônico de diversas informações ao Ministério do Trabalho e a Receita Federal. Por isso a empresa \textbf{deve} nos enviar a Ficha de Admissão completamente preenchida e uma cópia de todos os documentos solicitados (vide lista abaixo) por e-mail até as 12:00 do primeiro dia útil anterior à data de admissão do empregado, somente assim poderemos fazer o registro na CTPS conforme as novas regras, caso contrário a empresa corre o risco de ter que pagar multas por atraso.
+  \end{tcolorbox}
+  \subsubsection{Documentação Necessária}
+  \label{adm:docs}
+  Segue uma lista dos documentos pessoais que os empregado deve apresentar à empresa no momento da contratação e que devem ser copiados e arquivados:
+  \begin{itemize}
+    \item Carteira de Identidade.
+    \item Título de Eleitor.
+    \item Certificado de Reservista ou prova de alistamento no serviço militar, apenas para homens.
+    \item Cartão de Identificação do Contribuinte do Ministério da Fazenda - CIC/CPF.
+    \item Comprovante de endereço.
+    \item Carteiras profissionais expedidas pelos órgãos de classe, apenas para profissionais especializados.
+  \end{itemize}
+
+  \begin{tcolorbox}[title=Atenção!]
+    A empresa não pode reter qualquer documento de identificação pessoal, inclusive Carteira de Trabalho e Previdência Social (Lei nº 5.553, de 06 de dezembro de 1968), ainda que apresentada por fotocópia autenticada. Quando, para a realização de determinado ato, for exigida a apresentação de documento de identificação, a pessoa que fizer a exigência fará extrair no prazo de até 5 (cinco) dias os dados que interessarem, devolvendo em seguida o documento ao seu exibidor, sob pena de multa de 189,1424 UFIRS, no mínimo e no máximo 891,4236 UFIRS (artigo 630, §6º da CLT).
+  \end{tcolorbox}
+
+  \subsubsection{Contrato de Experiência}
+  \label{adm:exp}
+  O contrato de experiência pode ter um prazo máximo de 90 (noventa) dias corridos (que devem ser controlados pela empresa) e pode ser prorrogado apenas uma vez. O mesmo deverá ser anotado na CTPS, ter um contrato a termo e segue os mesmos termos do Contrato de Trabalho convencional, inclusive a renovação também é anotada na CTPS do empregado.
+
+  O contrato de experiência é um importante instrumento de gestão, deve ser acompanhado pelo empregador. O empregador deverá controlar sua renovação e anotar na CTPS a mesma, bem como, detectando que o empregado não atende sua expectativas, fazer contato com a contabilidade \textbf{antes} do vencimento do contrato de rxperiência para que seja feita a rescisão dentro do prazo legal evitando o pagamento do aviso prévio, pois caso a rescisão aconteça dentro período de experiência a empresa paga menos encargos.
+
+  \subsubsection{Vale-Transporte}
+  \label{adm:vt}
+  O Vale-transporte constitui benefício que o empregador antecipará ao trabalhador para utilização efetiva em despesas de deslocamento residência-trabalho e vice-versa. 
+
+  Entende-se por deslocamento a soma dos segmentos componentes da viagem do beneficiário, por um ou mais meios de transporte, entre sua residência e o local de trabalho. Por ocasião da admissão do empregado, este deve informar, por escrito, ao empregador:
+  \begin{itemize}
+    \item Endereço residencial.
+    \item Serviços e meios de transporte mais adequados ao deslocamento residência-trabalho e vice-versa.
+  \end{itemize}
+
+  O Vale-Transporte é custeado pelo beneficiário, na parcela equivalente a 6\% do seu salário básico ou vencimento, excluídos quaisquer adicionais ou vantagens; e pelo empregador, no que exceder à parcela mencionada anteriormente, porém não pode ser dado em dinheiro, deve ser fornecido sempre na forma de passe ou cartão.
+
+  \begin{tcolorbox}[title=Atenção!]
+    Em uma eventual fiscalização do MT se a empresa faz o desconto dos 6\% de vale transporte, ela precisa apresentar comprovante da compra dos mesmos; quando não é feito o desconto deve-se apresentar a declaração do empregado informando que vai de outra forma de transporte (próprio ou a pé), não necessitando do uso do transporte público Declaração de Dispensa de Vale-Transporte).
+  \end{tcolorbox}
+
+  Valores dados ao empregado na forma de dinheiro podem vir a integrar ao salário, por esta razão, esta pratica não deve acontecer. O objetivo, único, do vale transporte é custear o transporte público para o empregado se deslocar da sua residência para o trabalho, e nada mais.
+
+  \subsubsection{Carteira de Trabalho e Previdência Social - CTPS}
+  \label{adm:ctps}
+  A CTPS é documento obrigatório para o exercício de qualquer emprego, inclusive de natureza rural, ainda que em caráter temporário. 
+
+  É indispensável que o empregador a exija, por ocasião da admissão, sob pena de incorrer em multa por manter empregado sem esse documento.
+
+  O empregado que se recusar a entregar a CTPS deve ser notificado a entregar sob pena de rescisão do contrato de trabalho por justa causa (lembrando que o contrato de trabalho pode ser tácito, ou seja, não necessitando para a Justiça do Trabalho que o mesmo esteja anotado na CTPS).
+
+  De posse da CTPS, a empresa verifica, dentre outras, as anotações relativas à Contribuição Sindical e ao Programa de Integração Social/Programa de Formação do Patrimônio do Servidor Público (PIS/PASEP) etc.
+
+  \subsubsection{Anotações na CTPS}
+  \label{adm:notes}
+  Apresentada, obrigatoriamente, contra recibo, a empresa tem o prazo improrrogável de 48 horas para efetuar as anotações relativas à data de admissão, remuneração e condições especiais, se houver, sendo facultada a adoção de sistema manual, mecânico ou eletrônico. 
+  Na hipótese de celebração de contrato individual de trabalho, elaborado em documento à parte, como é aconselhável, deve-se anotá-lo na parte "Anotações Gerais" da CTPS, nos moldes seguintes, a título de exemplo: "Há cláusulas de trabalho firmadas em documento à parte".
+
+  Neste contrato devem estar previstas todas as condições de trabalho como jornada, horário de intervalo para descanso e refeições, remuneração, e, principalmente, possibilidade de o empregado ser responsabilizado civilmente pelos prejuízos que causar ao seu empregador por dolo ou culpa.
+
+  \subsection{Férias}
+  Um controle muito importante, e que é de responsabilidade do administrativo da empresa, é o controle das férias. 
+
+  É preciso que no início de cada ano seja feita uma programação de férias para todo o ano. O empregado só tem direito a férias depois de um ano. Antes disso não existe antecipação de férias legalmente (o que pode acontecer é um acordo entre as partes, quando for da conveniência do empregador, pois numa rescisão ele não poderá descontar este período antecipado).  Depois que o empregado adquiriu o direito ás férias (12 meses na empresa) a empresa tem um prazo legal de 11 meses para colocá-lo de férias.  
+
+  A empresa não pode deixar vencer dois períodos de férias sem gozo, pois neste caso terá que pagá-las em dobro. Por tal razão salientamos a importância de um planejamento, que irá beneficiar a empresa. 
+
+  A empresa deve comunicar ao empregado com 30 dias de antecedência do início de suas férias (o empregador pode escolher o momento, desde que comunique com tal antecedência).
+
+  \begin{tcolorbox}[title=Atenção!]
+    Periodicamente, para ajudar a empresa, enviamos um quadro com a previsão dos vencimentos das férias, assim a empresa terá em mãos instrumento para se programar e programar as férias de TODOS os empregados, evitando o vencimento de férias em dobro. Este controle é de responsabilidade exclusiva da empresa.
+  \end{tcolorbox}
+
+  \subsection{Contribuição Sindical}
+  \label{ins:sindical}
+  De acordo com a redação dada ao art. 587 da CLT pela Lei nº 13.467/2017 (Reforma Trabalhista), os empregadores que "optarem" pelo recolhimento da contribuição sindical deverão fazê-lo no mês de janeiro de cada ano, ou, para os que venham a se estabelecer após o referido mês, na ocasião em que requererem às repartições o registro ou a licença para o exercício da respectiva atividade.
+
+  Portanto, verifica-se que a contribuição sindical patronal passou a ser opcional para os empregadores, da mesma forma que é opcional para os empregados, tendo em vista que o desconto destes depende de autorização prévia e expressa. (Fonte: Perguntas e Respostas IOB)
+
+  A não ser, é claro, que a empresa ou o funcionário seja associado/filiado ao sindicato, pagando mensalidade ao sindicato, em que a contribuição sindical será devida.
+
+  Gostaria de frisar que estamos apenas comunicando uma nova mudança na Lei, sendo assim, cabe à empresa decidir e informar à contabilidade com antecedência, se deseja que a contabilidade gere a guia para pagamento. 
+
+  \begin{tcolorbox}[title=Atenção!]
+    A Contabilidade não se responsabiliza pelas cobranças que os sindicatos venham fazer às empresas pelo não recolhimento da guia pois, apesar de previsto em lei, muitos sindicatos costumam pressionar o pagamento, o que pode levar a ajuizamento de ações,  e nós não nos responsabilizamos por isso.  
+  \end{tcolorbox}
+
+  \subsection{Registro de Empregados segundo a CLT}
+  \label{ins:registro}
+  O artigo 41 da Consolidação das Leis do Trabalho - CLT, estabelece que em todas as atividades será obrigatório para o empregador o registro dos respectivos trabalhadores, podendo ser adotados livros, fichas ou sistema eletrônico, conforme instruções a serem expedidas pelo Ministério do Trabalho.
+
+  Em tal registro deverão ser anotados, além da qualificação civil ou profissional de cada trabalhador, todos os dados relativos à sua admissão no emprego, duração e efetividade do trabalho, acidentes e demais circunstâncias que interessem à proteção do trabalhador (Parágrafo Único do art. 41 da CLT). De acordo com o art. 1º da Portaria MTPS nº 3.626, de 13.11.91, o registro de empregados, que poderá ser efetuado em um livro, por meio de fichas ou em sistema informatizado, deverá conter, obrigatoriamente, as seguintes informações:
+  \begin{enumerate}[label*=\roman*.]
+    \item identificação do empregado, com número e série da Carteira de Trabalho e Previdência Social ou Número de Identificação do Trabalhador - NIT.
+    \item data de admissão e demissão.
+    \item cargo ou função, especificar; neste campo, o nome do cargo e as funções que serão desenvolvidas pelo empregado durante a jornada de trabalho.
+    \item remuneração e forma de pagamento, especificando, se for o caso, o valor do salário e os adicionais devidos, como, por exemplo: insalubridade, periculosidade, adicional noturno, horas extras etc, e a respectiva periodicidade (por hora, dia, semana, quinzena ou mês,a base de cálculo das comissões e o correspondente percentual, acrescido do Repouso Semanal Remunerado - RSR), bem como a forma de pagamento.
+    \item local e horário de trabalho; especificar o endereço do local onde as atividades serão efetivamente exercidas, bem como o horário de entrada e saída do trabalho.
+    \item concessão de férias; anotar as datas de início e fim das férias, o período aquisitivo a elas correspondente e a conversão em abono pecuniário, se for o caso.
+    \item identificação da conta vinculada do FGTS e da conta do PIS/PASEP.
+    \item acidente do trabalho e doença profissional, quando tiverem ocorrido; especificar a data do início do afastamento do trabalho e da respectiva alta médica, e o valor do benefício percebido. 
+    Lembra-se que a relação acima indica os dados mínimos obrigatórios, podendo a empresa, se assim o desejar, efetuar qualquer outro tipo de anotação na ficha ou folha do livro de registro de empregado, incluindo dados documentais ou relativos à vida funcional do trabalhador, facultando-se, ainda, a aposição da respectiva foto. 
+    Quanto à previdência social, em se tratando de empregado, a formalização de relação de emprego o toma segurado obrigatório, cuja filiação decorre automaticamente do exercício de atividade remunerada abrangida pelo Regime Geral da Previdência Social - RGPS. 
+    Dessa forma, não há necessidade de qualquer comunicação ao instituto das admissões feitas pela empresa ou formalidades relativas à matricula, registro etc., dos seus empregados.
+  \end{enumerate}
+
+  \subsection{Exames Médicos}
+  \label{ins:medico}
+  São obrigatórios os exames admissionais, periódico, de retorno ao trabalho, mudança de função e demissional, por conta do empregador que comprova o custeio de todas as despesas, quando solicitado pelo Agente de Inspeção do Trabalho (Norma Regulamentadora - NR -7, aprovada pela Portaria SSST nº 24/94, alterada pela de nº 8/96) 
+
+  Os exames médicos compreendem avaliação clínica, abrangendo análise ocupacional e exame físico e mental, bem como exames complementares, realizados de acordo com os termos especificados na citada N R - 7. 
+
+  Referida NR estabelece a obrigatoriedade da elaboração e implementação, por parte de todos os empregadores e instituições que admitam trabalhadores como empregados, do Programa de Controle Médico de Saúde Ocupacional (PCMSO), com o objetivo de promoção e preservação da saúde do conjunto dos seus trabalhadores. 
+
+  Para cada exame médico realizado, o médico emitirá o Atestado de Saúde Ocupacional (ASO), em duas vias. 
+
+  A 1ª via do ASO fica arquivada no local de trabalho do trabalhador, inclusive frente de Trabalho ou canteiro de obras, à disposição da fiscalização do trabalho. A 2ª via do ASO é obrigatoriamente entregue ao trabalhador, mediante recibo na 1ª via.
+
+  \begin{tcolorbox}[title=Atenção!]
+    A ausência da assinatura do empregado na 1ª via do ASO pode gerar multa e não é considerado um documento válido.
+  \end{tcolorbox}
+
+  \subsection{Salario-Família}
+  \label{ins:sal-fam}
+  O salário-família é um benefício devido ao segurado empregado, e ao trabalhador avulso, na proporção do respectivo número de filhos ou equiparados com até 14 (quatorze) anos de idade, salvo se inválido. 
+
+  Os valores das cotas de salário família são fixados pela tabela de descontos do INSS que é alterada anualmente, alertamos ainda que há um teto onde empregados que recebem mais que este teto perdem o direito ao referido benefício.
+
+  Com as modificações introduzidas no art. 67 da Lei nº 8.213 pela Lei nº 9.876, o pagamento do salário-família ficou condicionado à apresentação da certidão de nascimento do filho ou da documentação relativa ao equiparado ou ao inválido, e à apresentação anual de atestado de vacinação obrigatória e de comprovação de frequência à escola do filho ou equiparado, nos termos do regulamento. 
+
+  Posteriormente, com a publicação do Decreto nº 3.265/99, que alterou a redação do art. 84 e §§ do Regulamento da Previdência Social - Decreto nº 3.048/99, ficou estabelecido que o pagamento do salário- família será devido a partir da data da apresentação da certidão de nascimento do filho ou da documentação relativa ao equiparado, estando condicionado à apresentação anual de atestado de vacinação obrigatória, até seis anos de idade, e de comprovação semestral de frequência à escola do filho ou equiparado, a partir dos sete anos de idade. 
+
+  A empresa deverá conservar, durante dez anos, os comprovantes dos pagamentos e as cópias das certidões correspondentes, para exame pela fiscalização do Instituto Nacional do Seguro Social. 
+
+  A comprovação de frequência escolar será feita mediante apresentação de documento emitido pela escola, na forma de legislação própria, em nome do aluno, onde consta o registro de frequência regular ou de atestado do estabelecimento de ensino, comprovando a regularidade da matricula e frequência escolar do aluno. 
+
+  No caso de menor inválido que não frequenta à escola por motivo de invalidez, deve ser apresentado atestado médico que confirme esse fato.
+
+  \section{Arquivamento de Documentos}
+  \label{sec:arquivo}
+  O objetivo principal do nosso Treinamento Básico é esclarecer aos nossos clientes da importância da manutenção de arquivos organizados. Existem vários documentos que devem estar dentro da empresa a disposição da fiscalização. Toda empresa deve manter um quadro em local visível com onde deve estar os seguintes documentos:
+
+  \begin{itemize}
+    \item Quadro de horário dos empregados.
+    \item Alvará de Localização.
+    \item FIC.
+    \item Inscrição Estadual.
+    \item CNPJ.
+  \end{itemize}
+
+  \subsection{Documentos Departamento Pessoal}
+  \label{arquivo:pessoal}
+  É fundamental que os arquivos que ficam na empresa estejam em ordem. A empresa deverá manter uma pasta para cada empregado. Esta pasta é a história do empregado na empresa.
+
+  Em primeiro lugar deverá conter toda a documentação admissional, cópia de documentos (CPF, Identidade, Alistamento/reservista, Certidões - nascimento de filho e casamento -, cartão de vacina e etc.), depois os contra - cheques, recibos de férias e rescisão do contrato de trabalho (devidamente assinados). Está pasta não deve conter nada além dos documentos acima citados, como por exemplo gratificações que não foram lançadas em folha.
+
+  Esta pasta pode ser exigida pela fiscalização do MT, portanto deve estar muito bem organizada.
+
+  Este é um dos mais importantes arquivos pois mesmo depois que o empregado se desligou da empresa não acaba a responsabilidade da empresa.
+
+  O livro de inspeção do trabalho deve ficar sempre em local acessível na empresa, neste livro o fiscal do trabalho irá fazer suas anotações.
+
+  \begin{tcolorbox}[title=Atenção!]
+    O Livro de Registro de Empregados, não sairá da empresa para NADA, este livro deve sempre estar atualizado, isto é, com todos os dados admissionais devidamente preenchidos, retrato do empregado, devidamente assinado pelo empregado na admissão bem como na saída. A contabilidade passa as informações que serão TRANSCRITAS para o livro INTERNAMENTE na empresa.
+  \end{tcolorbox}
+
+  O artigo 630, S 3º da CLT determina que a empresa ao receber a Fiscalização do Trabalho está obrigada a exibir toda a documentação exigida, que diga respeito ao fiel cumprimento das normas de proteção ao trabalho. Para que isto ocorra sem maiores transtornos, deverá manter a documentação guardada por um determinado período a seguir relacionado:
+
+  \begin{center}
+    \rowcolors{3}{gray!50}{gray!30}
+    \begin{longtable}{|P{0.2\linewidth}|P{0.5\linewidth}|P{0.2\linewidth}|}
+      \hline
+      \rowcolor{darkGrey}
+      DOCUMENTO & PERÍODO & Fundamentação \\
+      \hline
+      Acordo de compensação & 5 anos durante o emprego, até 2 anos após rescisão & CF, art.7º, XXIX \\
+      Acordo de prorrogação & 5 anos durante o emprego, até 2 anos após rescisão & CF, art.7º, XXIX \\
+      Atestado médico & 5 anos durante o emprego, até 2 anos após rescisão & CF, art.7º, XXIX \\
+      Aviso prévio & 5 anos durante o emprego, até 2 anos após rescisão & CF, art.7º, XXIX \\
+      CAGED - Cadastro Geral de Empregados e Desempregados & 3 anos a contar da data da postagem (Documento fica em nosso escritório) & Port. MTb  194/95,art. 1º,S 2º \\
+      Comprovante de cadastramento no PIS & 10 anos & Dec.lei nº 2052/83 arts. 3º e 10º \\
+      FGTS (GR, RE, GRE,GFIP) & 30 anos & Decreto 99.684/90 \\
+      GRCS - Guia de Recolhimento de Contribuição Sindical & 5 anos & CTN - Lei 5172/66 art. 174 \\
+      GRPS - GPS e toda a documentação previdenciária & Quando não tenha havido levantamento fiscal (folha de pagamento, recibos, ficha de salário-família, atestados médicos, guia de recolhimento) 10 anos & Não há \\
+      Livro de Inspeção do Trabalho & Indeterminado & Não há \\
+      Pedido de demissão & 2 anos & CF, art. 7º, XXIX \\
+      RAIS & 10 anos  & Dec.-lei nº 2052/83, arts. 3º e 10º \\
+      Recibo de Férias (gozo, abono pecuniário e solicitação de abono de férias) & 5 anos durante o emprego, até 2 anos após a rescisão *vide GRPS/GPS & CF, art. 7º, XXIX \\
+      Recibo de entrega da Comunicação de Dispensa - CD (Seguro Desemprego) & 5 anos & Resolução CODEFAT nº  71/94 \\
+      \hline
+      \pagebreak
+      \hline
+      \rowcolor{darkGrey}
+      DOCUMENTO & PERÍODO & Fundamentação \\
+      \hline
+      Recibo de pagamento de salário (e adiantamento quando for o caso) & 5 anos durante o emprego, até 2 anos após a rescisão *vide GRPS/GPS & CF, art. 7º, XXIX \\
+      Registro de empregados & Indeterminado & Não há \\
+      Termo de Rescisão de Contrato de Trabalho & 2 anos *vide GRPS/GPS & CF, art. 7º, XXIX \\
+      Termo de Rescisão de Contrato de Trabalho & 2 anos *vide GRPS/GPS & CF, art. 7º, XXIX \\
+      Vale-transporte & 5 anos durante o emprego, até 2 anos após a rescisão & CF, art. 7º, XXIX \\
+      \hline
+
+    \end{longtable}
+  \end{center}
+
+  \subsection{Documentos Fiscais}
+  \label{arquivo:fiscal}
+  A empresa deve arquivar os arquivos XMLs das Notas Fiscais Eletrônicas e das Notas Fiscais Eletrônicas de Serviço por um período mínimo de 5 anos. DANFEs e notas de serviço impressas não têm validade documental, não sendo exigidas durante fiscalizações. Atualmente fiscais exigirão apenas os XMLs.
+
+  A empresa deve também guardar o registro de utilização de documentos Fiscais e Termo de Ocorrências que fica dentro da empresa à disposição da fiscalização (estadual e municipal).
+}
+
+\newcommand{\parteNfe}{
+  \parte{Nota Fiscal Eletrônica (NF-e)}
+  \section{Instruções Gerais Emissão NF-e}
+  \label{sec:emissao-nfe}
+  \subsection{Nota Fiscal de Entrada}
+  \label{emissaonfe:entrada}
+  No momento da entrada do bem no estabelecimento, quando o bem foi \textbf{adquirido de uma pessoa física ou PJ não obrigada} (PJ sem inscrição estadual), é indispensável que seja emitida a Nota Fiscal de Entrada para que o bem se encontre em situação legal, devidamente acobertado.
+  \begin{quotation}
+    \textbf{RICMS/2002 (PARTE GERAL)} \\
+    Art. 20 - O contribuinte emitirá nota fiscal sempre que em seu estabelecimento entrarem, real ou simbolicamente, bens ou mercadorias: \\
+    (1473)     I - novos ou usados, remetidos a qualquer título por pessoas físicas ou jurídicas não obrigadas à emissão de documentos fiscais;” \\
+  \end{quotation}
+  \begin{tcolorbox}[title=Atenção!]
+    \textbf{QUANDO A COMPRA FOR DE OUTRA PESSOA JURÍDICA QUE POSSUA INSCRIÇÃO ESTADUAL, A NOTA DE VENDA DA EMPRESA FORNECEDORA SERÁ USADA COMO A NOTA DE COMPRA, BASTA ENVIAR UMA CÓPIA. NÃO SE EMITE NOTA DE ENTRADA PARA OUTRA EMPRESA QUE POSSUA INSCRIÇÃO ESTADUAL.}
+  \end{tcolorbox}
+
+  \subsubsection{Informações Gerais da Nota}
+  \begin{itemize}
+    \item O nome do vendedor deve ser o nome informado no \textbf{DUT}.
+    \item No histórico deve vir a descrição do bem (veículo marca, modelo, placa, cor, chassi, valor).
+    \item No campo de base de cálculo do ICMS o valor deve vir zerado, pois na entrada, neste caso, \textbf{não há ICMS}.
+    \item CST: 041.
+    \item As demais informações vão variar de acordo com o tipo específico da operação, siga as intruções na subseção \ref{emissaonfe:entrada-compra} caso a operação seja de \textbf{compra}, caso a operação seja uma \textbf{consignação} siga as instruções na subseção \ref{emissaonfe:entrada-consig} e para \textbf{compra definitiva} siga as instruções da subseção \ref{emissaonfe:entrada-definitiva}.
+    \item Para compras a prazo siga as instruções da subseção \ref{emissaonfe:entrada-prazo}.
+  \end{itemize}
+  \subsubsection{Entrada de Compra}
+  \label{emissaonfe:entrada-compra}
+  \begin{itemize}
+    \item No campo natureza da operação: \itasp{Compra}.
+    \item No campo CFOP: \itasp{1.102}.
+  \end{itemize}
+  \subsubsection{Entrada Consignação}
+  \label{emissaonfe:entrada-consig}
+  \begin{itemize}
+    \item Anotar o número do contrato de consignação.
+    \item No campo natureza da operação: \itasp{Consignação}.
+    \item No campo CFOP: \itasp{1.917}.
+  \end{itemize}
+  \subsubsection{Compra Definitiva (bem que estava consigninado)}
+  \label{emissaonfe:entrada-definitiva}
+  \begin{itemize}
+    \item No campo natureza da operação: \itasp{Compra Definitiva}.
+    \item No campo CFOP: \itasp{1.113} (informar nota 1.917 que deu origem).
+  \end{itemize}
+  \subsubsection{Compra a Prazo}
+  \label{emissaonfe:entrada-prazo}
+  \begin{itemize}
+    \item Anotar no campo de observação da nota fiscal de acordo com o exemplo abaixo:
+    \begin{tcolorbox}[title=Exemplo]
+      \begin{tabular}{rr}
+        Compra de R\$6.000,00: & \\
+        Prazo de pagamento: & R\$2.000,00 com NP 30 dias \\
+        & R\$2.000,00 com NP 60 dias \\
+        & R\$2.000,00 com NP 90 dias \\
+      \end{tabular}
+    \end{tcolorbox}
+    \item Enviar as NPs quitadas para darmos saída no caixa, anotar 1/3 – 2/3 – 3/3 e o número da Nota Fiscal que está sendo paga. Caso seja de outra forma especificar na nota e enviar documentação comprobatória dos pagamentos (boletas/cheques > tudo detalhado na movimentação bancária).
+    
+  \end{itemize}
+
+  \subsection{Nota Fiscal de Saída}
+  \label{emissaonfe:saida}
+  \subsubsection{Venda de Bem - Operação Interna (Dentro do Estado)}
+  \label{emissaonfe:saida-venda-interna}
+    \begin{itemize}
+      \item No campo natureza da operação: \itasp{Venda}.
+      \item No campo CFOP: \itasp{5.102}.
+      \item O valor da nota é: \textit{Valor Nota Entrada + Lucro}.
+      \item \textbf{OBS:} Os produtos vendidos desta maneira devem ter nota de entrada de emissão própria com CFOP 1.102 / 2.202 ou nota de venda de terceiros.
+      \item No cabeçalho deve vir o nome de quem adquiriu o bem.
+      \item No Histórico deve vir a descrição do bem (veículo marca, modelo, placa, cor, chassi, valor).
+      \item CST: 020.
+    \end{itemize}
+
+  \subsubsection{Venda de Bem - Operação Interestadual}
+  \label{emissaonfe:saida-venda-externa}
+  \begin{tcolorbox}[title=Atenção!]
+    \textbf{ALGUNS ESTADOS NÃO TÊM REDUÇÃO NA BASE DA DIFAL, FAZENDO COM QUE A VENDA SEJA INVIÁVEL, SEMPRE QUE FOR FAZER UMA VENDA INTERESTADUAL LIGAR PARA A CONTABILIDADE ANTES DE FINALIZAR A OPERAÇÃO. A GUIA DE DIFAL DEVE SER PAGA NO DIA DA VENDA!}
+  \end{tcolorbox}
+  \begin{itemize}
+    \item No campo natureza da operação: \itasp{Venda}.
+    \item No campo CFOP: \itasp{6.102}.
+    \item O valor da nota é: \textit{Valor Nota Entrada + Lucro}.
+    \item \textbf{OBS:} Os produtos vendidos desta maneira devem ter nota de entrada de emissão própria com CFOP 1.102 / 2.202 ou nota de venda de terceiros.
+    \item No cabeçalho deve vir o nome de quem adquiriu o bem.
+    \item No Histórico deve vir a descrição do bem (veículo marca, modelo, placa, cor, chassi, valor).
+    \item CST: 020.
+    \begin{tcolorbox}[title=Cálculo do ICMS (Operação Interestadual)]
+      \begin{itemize}
+        \item Quando a venda for a consumidor final fazer o cálculo da DIFAL (consulte a contabilidade, cada Estado é um caso).
+        \item Consulte na contabilidade a alíquota que vai de 7\% a 12\%.
+      \end{itemize}
+    \end{tcolorbox}
+    \item OBS: Nas operações Interestaduais o cálculo do ICMS não terá como base de cálculo Saída – Entrada, e sim o valor total da nota fiscal com redução de 95\% * alíquota de cada Estado (7\% ou 12\%).
+  \end{itemize}
+
+  \subsubsection{Venda de Bem Consigninado}
+  \label{emissaonfe:saida-venda-consig}
+  Na venda de um bem consignado, são emitidas 2 notas de entrada e 2 notas de saída sendo: uma nota de consignação, uma nota de devolução simbólica, uma nota de compra definitiva e uma nota de venda. Para informações mais detalhadas consultar tabela na seção \ref{sec:tabela-nfe}.
+  \begin{enumerate}
+    \item Devolução Simbólica
+    \begin{itemize}
+      \item No campo de Natureza da operação: \itasp{Devolução SIMBÓLICA de Mercadoria Recebida em Consignado}
+      \item No campo CFOP: \itasp{5.919}
+      \item Mesmo valor da nota de entrada.
+      \item INFORMAÇÕES COMPLEMENTARES: Nota fiscal emitida em função de VENDA de mercadoria recebida em CONSIGNAÇÃO pela NF-e nº (número e data da nota de entrada 1.917 – Esta nota terá sempre na data da venda, igual a data da venda 5.115 abaixo)
+    \end{itemize}
+    \item Venda Mercadoria Recebida em Consignação
+    \begin{itemize}
+      \item No campo natureza da operação: \itasp{Venda Mercadoria Recebida em Consignação}.
+      \item No campo CFOP: \itasp{5.115}.
+      \item O valor da nota é: \textit{Valor Nota Entrada + Lucro}.
+      \item \textbf{OBS:} Os produtos vendidos desta maneira devem ter nota de entrada de emissão própria com CFOP 1.917 e deve ter nota posterior de compra definitiva com CFOP 1.113.
+      \item No cabeçalho deve vir o nome de quem adquiriu o bem.
+      \item No Histórico deve vir a descrição do bem (veículo marca, modelo, placa, cor, chassi, valor).
+      \item CST: 020.
+    \end{itemize}
+  \end{enumerate}
+
+  \subsubsection{Devolução de Bem em Consignação}
+  \label{emissaonfe:saida-devolucao-consig}
+  \begin{itemize}
+    \item No campo natureza da operação: \itasp{Devolução de Mercadoria}.
+    \item No campo CFOP: \itasp{5.918}.
+    \item No cabeçalho deve vir o mesmo nome que está na Nota Fiscal de Entrada.
+    \item No Histórico deve vir a descrição do bem (veículo marca, modelo, placa, cor, chassi, valor).
+    \item Como essa operação não gera receita o campo de ICMS deve estar zerado.
+    \item CST: 041.
+  \end{itemize}
+
+  \subsection{Informações Adicionais}
+  \label{emissaonfe:infos-ad}
+  \subsubsection{Anotações}
+  \label{emissaonfe:infos-ad-notes}
+  \begin{itemize}
+    \item Toda operação com CFOP 1.102 / 1.917 devem conter a seguinte anotação:
+    \begin{tcolorbox}
+      Emitida nos termos do Anexo V, artigo 20, inciso I do RICMS-MG/2002. \\
+      ICMS: não incidências por estar incurso no artigo 55, parágrafo 1º e 2º do RICMS-MG/2002.
+    \end{tcolorbox}
+    \item Toda operação com CFOP 5.102 / 5.115 devem conter a seguinte anotação:
+    \begin{tcolorbox}
+      Base de cálculo do ICMS reduzida (-72,22\%) de acordo com item 10 do anexo IV do RICMS decreto 43080/2002. \\
+      NF Entrada nº: \_\_\_\_ Data: \_\_\_/\_\_\_/\_\_\_ \\
+      Os tributos federais incidentes sobre esta operação serão recolhidos conforme artigo 5º Lei 9.716/98. \\
+      \% de Impostos conforme Lei 12.741 > 8,65\%
+
+    \end{tcolorbox}
+  \end{itemize}
+
+  \subsubsection{Cálculo ICMS (Operação Interna)}
+  O Valor do ICMS em operações internas correspondem a 5\% do lucro. Para se encontrar o valor do ICMS de maneira simples basta apenas:
+  $$ Lucro = Saida - Entrada $$
+  $$ICMS = Lucro * 5\%$$
+
+  Mesmo que esse cálculo leve ao valor correto devido do ICMS, a Receita Estadual não o calcula assim. O cálculo usado pela Receita Estadual é:
+  $$ Lucro = Saida - Entrada $$
+  $$ BC = Lucro - (Lucro * 72,22\%) $$
+  $$ ICMS = BC * 18\% $$
+
+  Por isso, \textbf{No campo ICMS da nota fiscal, a aliquota que deve ser informada é de 18\%}.
+  \label{emissaonfe:infos-ad-icms}
+
+  \pagebreak
+  \section{Resumo NF-e}
+  \label{sec:tabela-nfe}
+  \begin{center}
+    \addtolength{\leftskip} {-2cm}
+    \addtolength{\rightskip}{-2cm}
+    \begin{tabular}{
+      |P{0.18\linewidth-2\tabcolsep}
+      |P{0.18\linewidth-2\tabcolsep}
+      |P{0.18\linewidth-2\tabcolsep}
+      ||P{0.18\linewidth-2\tabcolsep}
+      |P{0.18\linewidth-2\tabcolsep}
+      |P{0.18\linewidth-2\tabcolsep}
+      |P{0.18\linewidth-2\tabcolsep}|}
+      \hline
+      \multicolumn{7}{|c|}{\textbf{QUADRO RESUMO DE EMISSÃO DE NOTA FISCAL}} \\
+      \hline\hline
+      \multicolumn{3}{|c||}{\textbf{ENTRADA}} & \multicolumn{4}{c|}{\textbf{SAÍDA}}\\
+      \hline
+      {\small Consignação} &
+      {\small Compra Definitiva} &
+      {\small Compra} &
+      {\small Devolução} &
+      {\small Venda} &
+      {\small Devolução simbólica} &
+      {\small Venda} \\
+      \hline
+      \cellcolor{lightYellow} {\small \textbf{CFOP 1.917}} &
+      \cellcolor{lightYellow} {\small \textbf{CFOP 1.113}} &
+      \cellcolor{lightYellow} {\small \textbf{CFOP 1.102}} &
+      \cellcolor{lightYellow} {\small \textbf{CFOP 5.918}} &
+      \cellcolor{lightGreen} {\scriptsize \textbf{CFOP 5.102/6.102}} &
+      \cellcolor{lightYellow} {\small \textbf{CFOP 5.919}} &
+      \cellcolor{lightGreen} {\scriptsize \textbf{CFOP 5.115/6.115}} \\
+      
+      \hline
+      {\small Consignação} &
+      {\tiny Compra Definitiva (Faturamento)} &
+      {\small Compra} &
+      {\small Devolução} &
+      {\small Venda} &
+      {\tiny Devolução SIMBÓLICA de Mercadoria Recebida em consignação} &
+      {\scriptsize Venda Mercadoria Recebida em Consignação} \\
+
+      \hline
+      {\small \textbf{CST: 041} (nacional)} &
+      {\small \textbf{CST: 041} (nacional)} &
+      {\small \textbf{CST: 041} (nacional)} &
+      {\small \textbf{CST: 041} (nacional)} &
+      {\small \textbf{CST: 020} (nacional)} &
+      {\small \textbf{CST: 041} (nacional)} &
+      {\small \textbf{CST: 020} (nacional)} \\
+
+      \hline
+      {\small CST (PIS e COFINS): \textbf{74}} &
+      {\small CST (PIS e COFINS): \textbf{74}} &
+      {\small CST (PIS e COFINS): \textbf{74}} &
+      {\small CST (PIS e COFINS): \textbf{08 (sem lucro)}} &
+      {\small CST (PIS e COFINS): \textbf{01 / 08 (sem lucro)}} &
+      {\small CST (PIS e COFINS): \textbf{08}} &
+      {\small CST (PIS e COFINS): \textbf{01 / 08 (sem lucro)}} \\
+
+      \hline
+      {\small *Adquirido de pessoa física} &
+      {\small *Adquirido de pessoa física} &
+      {\small *Adquirido de pessoa física} &
+      &
+      {\small \textbf{Destaque do ICMS} \par $Base * 72,22\% * 18\%$} &
+      {\tiny Nota fiscal emitida em função de VENDA de mercadoria recebida em CONSIGNAÇÃO pela NF-e nº (número e data da nota de entrada 1.917 – Esta nota terá sempre na data da venda, igual a data da venda 5.115)} &
+      {\small \textbf{Destaque do ICMS} \par $Base * 72,22\% * 18\%$} \\
+
+      \hline
+      &
+      &
+      \cellcolor{cian} 1 ($\bigcirc$) &
+      &
+      \cellcolor{cian} 2 ($\bigcirc$) &
+      &
+      \\
+
+      \hline
+      \cellcolor{pink} 1 ($\blacksquare$) &
+      \cellcolor{pink} 3 ($\blacksquare$) &
+      &
+      &
+      &
+      \cellcolor{pink} 2 ($\blacksquare$) &
+      \cellcolor{pink} 4 ($\blacksquare$) \\
+
+      \hline
+      \cellcolor{orange} 1 ($\blacktriangle$) &
+      &
+      &
+      \cellcolor{orange} 2 ($\blacktriangle$) &
+      &
+      &
+      \\
+      \hline
+    \end{tabular}
+
+    \begin{tabular}{
+      |P{0.3\linewidth-2\tabcolsep}
+      |P{0.6\linewidth-2\tabcolsep}|
+    }
+    
+      \hline
+    
+      \multicolumn{2}{|c|}{\textbf{LEGENDA}} \\
+      \hline
+    
+      \cellcolor{cian} Compra/Venda ($\bigcirc$) &
+      Notas que devem ser emitidas no caso de veículos que entraram na empresa na forma inicial de COMPRA.\\    
+      \hline
+
+      \cellcolor{pink} Consignação ($\blacksquare$) &
+      Notas emitidas no caso de veículos consignados que foram posteriormente comprados pela empresa e então vendidos. \\
+      \hline
+    
+      \cellcolor{orange} Consignação/Devolução ($\blacktriangle$) &
+      Notas que devem ser emitidas para os veículos que estavam consignados e foram devolvidos (não gerando negócio)\\
+      \hline
+    
+      \cellcolor{lightYellow} &
+      Sem destaque de implostos \\
+      \hline
+    
+      \cellcolor{lightGreen} &
+      Com destaque de implostos \\
+      \hline
+    
+      \textbf{BASE DE CÁLCULO} &
+      \textit{Valor NF Saída - Valor NF Entrada} \\
+      \hline
+      
+    
+    \end{tabular}  
+  \end{center}
+
+  \pagebreak
+  \section{Tabela de NCMs}
+  \label{sec:tabela-ncm}
+  \begin{center}
+    \rowcolors{2}{gray!50}{gray!30}
+    \begin{longtable}{
+      |p{0.3\linewidth-2\tabcolsep}
+      |p{0.7\linewidth-2\tabcolsep}|
+    }
+      \hline
+      \rowcolor{darkGrey}
+      \textbf{NCM} & \textbf{DESCRIÇÃO} \\
+      87 & VEÍCULOS AUTOMÓVEIS, TRATORES, CICLOS E OUTROS VEÍCULOS TERRESTRES, SUAS PARTES E ACESSÓRIOS \\
+      87.01 & TRATORES (EXCETO OS CARROS-TRATORES DA POSIÇÃO 87.09). \\
+      8701.10.00 & Tratores de eixo único \\
+      8701.20.00 & Tratores rodoviários para semirreboques \\
+      8701.30.00 & Tratores de lagartas (esteiras) \\
+      8701.9 & OUTROS, COM UMA POTÊNCIA DE MOTOR: \\
+      8701.91.00 & Não superior a 18 kW \\
+      8701.92.00 & Superior a 18 kW, mas não superior a 37 kW \\
+      8701.93.00 & Superior a 37 kW, mas não superior a 75 kW \\
+      8701.94 & SUPERIOR A 75 KW, MAS NÃO SUPERIOR A 130 KW \\
+      8701.94.10 & Tratores especialmente concebidos para arrastar troncos (log skidders) \\
+      8701.94.90 & Outros \\
+      8701.95 & SUPERIOR A 130 KW \\
+      8701.95.10 & Tratores especialmente concebidos para arrastar troncos (log skidders) \\
+      8701.95.90 & Outros \\
+      87.02 & VEÍCULOS AUTOMÓVEIS PARA TRANSPORTE DE DEZ PESSOAS OU MAIS, INCLUINDO O MOTORISTA. \\
+      8702.10.00 & Unicamente com motor de pistão de ignição por compressão (diesel ou semidiesel) \\
+      8702.20.00 & Equipados para propulsão, simultaneamente, com um motor de pistão de ignição por compressão (diesel ou semidiesel) e um motor elétrico \\
+      8702.30.00 & Equipados para propulsão, simultaneamente, com um motor de pistão alternativo de ignição por centelha (faísca*) e um motor elétrico \\
+      8702.40 & UNICAMENTE COM MOTOR ELÉTRICO PARA PROPULSÃO \\
+      8702.40.10 & Trólebus \\
+      8702.40.90 & Outros \\
+      8702.90.00 & Outros \\
+      \rowcolor{lightGreen}
+      87.03 & AUTOMÓVEIS DE PASSAGEIROS E OUTROS VEÍCULOS AUTOMÓVEIS PRINCIPALMENTE CONCEBIDOS PARA TRANSPORTE DE PESSOAS (EXCETO OS DA POSIÇÃO 87.02), INCLUINDO OS VEÍCULOS DE USO MISTO (STATION WAGONS) E OS AUTOMÓVEIS DE CORRIDA. \\
+      8703.10.00 & Veículos especialmente concebidos para se deslocar sobre a neve; veículos especiais para transporte de pessoas nos campos de golfe e veículos semelhantes \\
+      \rowcolor{lightYellow}
+      8703.2 & OUTROS VEÍCULOS, UNICAMENTE COM MOTOR DE PISTÃO ALTERNATIVO DE IGNIÇÃO POR CENTELHA (FAÍSCA*): \\
+      8703.21.00 & De cilindrada não superior a 1.000 cm3 \\
+      \rowcolor{lightYellow}
+      8703.22 & DE CILINDRADA SUPERIOR A 1.000 CM3, MAS NÃO SUPERIOR A 1.500 CM3 \\ 
+      8703.22.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+      8703.22.90 & Outros \\
+      \rowcolor{lightYellow}
+      8703.23 & DE CILINDRADA SUPERIOR A 1.500 CM3, MAS NÃO SUPERIOR A 3.000 CM3 \\
+      \hline
+      \pagebreak
+      \hline
+      \rowcolor{darkGrey}
+      \textbf{NCM} & \textbf{DESCRIÇÃO} \\
+      8703.23.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+      8703.23.90 & Outros \\
+      \rowcolor{lightYellow}
+      8703.24 & DE CILINDRADA SUPERIOR A 3.000 CM3 \\
+      8703.24.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+      8703.24.90 & Outros \\
+      8703.3 & OUTROS VEÍCULOS, UNICAMENTE COM MOTOR DE PISTÃO DE IGNIÇÃO POR COMPRESSÃO (DIESEL OU SEMIDIESEL): \\
+      8703.31 & DE CILINDRADA NÃO SUPERIOR A 1.500 CM3 \\
+      8703.31.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+      8703.31.90 & Outros \\
+      8703.32 & DE CILINDRADA SUPERIOR A 1.500 CM3, MAS NÃO SUPERIOR A 2.500 CM3 \\
+      8703.32.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+      8703.32.90 & Outros \\
+      8703.33 & DE CILINDRADA SUPERIOR A 2.500 CM3 \\
+      8703.33.10 & Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista \\
+      8703.33.90 & Outros \\
+      8703.40.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão alternativo de ignição por centelha (faísca*) e um motor elétrico, exceto os suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+      8703.50.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão de ignição por compressão (diesel ou semidiesel) e um motor elétrico, exceto os suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+      8703.60.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão alternativo de ignição por centelha (faísca*) e um motor elétrico, suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+      8703.70.00 & Outros veículos, equipados para propulsão, simultaneamente, com um motor de pistão de ignição por compressão (diesel ou semidiesel) e um motor elétrico, suscetíveis de serem carregados por conexão a uma fonte externa de energia elétrica \\
+      8703.80.00 & Outros veículos, equipados unicamente com motor elétrico para propulsão \\
+      8703.90.00 & Outros \\
+      \hline
+    \end{longtable}
+  \end{center}
+}
+
+\newcommand{\parteNfse}{
+  \parte{Nota Fiscal de Serviços Eletrônica (NFS-e)}
+  \section{Introdução}
+  \label{sec:servico-intro}
+  Sempre que a empresa receber retorno de financeira ou efetuar um serviço de intermediação onde houve pagamento de comissão (consignação e comissão são operações diferentes), a empresa deverá emitir a Nota Fiscal de Serviços Eletrônica (NFS-e). No caso de retorno de financeira a nota será emitida no final do mês, uma nota para cada financeira, os valores devem ser solicitados da financeira, tanto o valor do serviço como das retenções, caso haja. Normalmente é retido 1,5\% a título de Imposto de Renda Retido na Fonte e 3\% de ISSQN, contudo, essa retenção pode não ocorrer, quando o ISS não for retido será emitida uma guia de 3\% do valor da Nota Fiscal.
+
+  As financeiras geralmente exigem nota fiscal para liberação dos valores de retorno.
+
+  As notas de serviço \textbf{devem ser emitidas dentro do mês de competência}.
+
+  Quanto a financeira retiver o ISSQN deve-se solicitar o recibo da DES onde consta a informação de que este valor foi recolhido para PBH.
+
+  \begin{tcolorbox}[title=Atenção!]
+    A retenção do ISS só é devida caso a financeira seja de Belo Horizonte, caso contrário o ISS não deve ser retido. Vale ressaltar que empresas sediadas no Rio de Janeiro e em São Paulo exigem um cadastro na prefeitura local para não efetuarem a retenção, caso esse cadastro não seja feito, a empresa pagará ISS dobrado. Para mais informações sobre o cadastro em outras prefeituras entrar em contato com o setor de processos (\emailprocessos).
+  \end{tcolorbox}
+
+
+  \section{Prefeitura de Belo Horizonte}
+  \label{sec:servico-pbh}
+  \subsection{Autenticação}
+  \label{servico-pbh:aut}
+  \begin{enumerate}
+    \item Acessar o portal de emissão de notas através do link: \textit{https://bhissdigital.pbh.gov.br/}. \textbf{Recomendamos que o acesso seja feito pelo Google Chrome}.
+    \item Clicar no botão \itasp{Autenticação}. \imagem{autenticar-pbh}{0.8}
+    \pagebreak
+    \item Digitar o CNPJ no campo \itasp{Usuário}, a senha padrão de nossos clientes é o número da contabilidade: \textit{34972898}, digite esse valor no campo \itasp{Senha}. \textbf{OBS: favor não modificar a senha, usamos esse acesso para entrega de declarações mensais}. \imagem{login-form-pbh}{0.5}
+  \end{enumerate}
+  \subsection{Configuração}
+  \label{servico-pbh:config}
+  \textbf{OBS: Esse procedimento de configuração é necessário para que o sistema da prefeitura funcione adequadamente.}
+  \begin{enumerate}
+    \item Proceda a autenticação como é explicado na subseção \ref{servico-pbh:aut}.
+    \item Clique no botão \itasp{Geração} \ do menu superior. \imagem{menu-nota-pbh}{0.9}
+    \pagebreak
+    \item Clique no botão \itasp{(Clique aqui se for a data atual)} \ e depois no botão \itasp{Confirmar}. \imagem{emissao-popup}{0.4}
+    \item Essa mensagem deverá aparecer na sua tela, clique no botão \itasp{OK}. \imagem{msg-pki}{0.5}
+    \item Clique no botão \itasp{Adicionar Web PKI na Chrome Store}. \imagem{install-pki-1}{0.7}
+    \item Clique no botão \itasp{Usar no Chrome}. \imagem{install-pki-2}{1}
+    \pagebreak
+    \item Instale o programa \itasp{WebPkiSetup\_pt-BR.msi} que foi baixado em seu computador. Depois desse procedimento você deve ser redirecionado novamente para o site de emissão da prefeitura. \imagem{install-pki-3}{0.8}
+  \end{enumerate}
+
+  \subsection{Emissão}
+  \label{servico-pbh:emis}
+  \begin{enumerate}
+    \item Proceda a autenticação como é explicado na subseção \ref{servico-pbh:aut}.
+    \item Clique no botão \itasp{Geração} do menu superior. \imagem{menu-nota-pbh}{0.7}
+    \item Preencha a data ou clique no botão \itasp{(Clique aqui se for a data atual)} caso a data seja o dia atual e depois no botão \itasp{Confirmar}. \imagem{emissao-popup}{0.4}
+    \pagebreak
+    \item Na primeira aba \itasp{Tomador do(s) Serviço(s)} deve-se preencher as informações do tomador dos serviços. Caso seja uma empresa com sede em Belo Horizonte preencha apenas a Inscrição Municipal e depois clique no icone da lupa. \imagem{aba-tomador}{0.8}
+    \item Na segunda aba \itasp{Identificação do(s) Serviço(s)} deve-se:
+    \begin{enumerate}[label*=\arabic*.]
+      \item No campo \itasp{Discriminação do(s) serviço(s) prestados} colocar as informações do serviço.
+      \item Conferir se no campo \itasp{Código de Tributação do Município (CTISS)} o serviço selecionado está correto.
+      \item Caso a empresa tenha algum regime especial selecionar no campo \itasp{Regime Especial de Tributação}.
+    \end{enumerate}
+    \imagem{aba-identificacao}{0.8}
+    \pagebreak
+    \item Na terceira aba \itasp{Valores} preencha o valor do serviço e o valor das retenções, quando houver. Depois clique no botão \itasp{Gerar NFS-e} \imagem{aba-valores}{0.8}
+    \item Confira o valores da nota e no campo \itasp{Selecione o certificado digital para assinatura} selecione o certificado digital, caso não o encontre instale o certificado como é explicado na seção \ref{sec:install-cert}. \imagem{resumo-nfse}{0.7}
+    \item Ao final do procedimento, você será redirecionado para a página da nota fiscal, recomendamos que o XML da nota seja baixado e guardado em local seguro. \imagem{nota-final}{0.7}
+  \end{enumerate}
+
+  \subsection{Consulta por Tomador}
+  \label{servico-pbh:tomador}
+  Recomendamos que a empresa sempre confira as notas de serviço que foram emitidas contra ela, para que não tenha nenhuma surpresa. Caso a empresa encontre uma nota que não reconhece o serviço, entrar em contato com a contabilidade para proceder o desconhecimento da nota.
+    \begin{enumerate}
+      \item Proceda a autenticação como é explicado na subseção \ref{servico-pbh:aut}.
+      \item Selecione a opção \itasp{Consulta de NFS-e Emitida/Recebida} que está na opção \itasp{Consulta} do menu superior. \imagem{consulta-nota-menu}{0.5}
+      \item Na tela de consulta:
+      \begin{enumerate}[label*=\arabic*.]
+        \item Selecione a opção \itasp{Tomador} na primeira linha.
+        \item Preencha a data de emissão ou competência, caso a data final não seja preenchida é considerado o dia atual.
+        \item clique no botão \itasp{Consultar}.
+      \end{enumerate}
+      \imagem{consulta-nfse}{0.7}
+      \item As notas que foram emitidas contra a empresa no período selecionado aparecerão em lista no final da página.
+    \end{enumerate}
+}
+
+\newcommand{\parteNfstock}{
+    \parte{Gestão NF-Stock}
+  \section{Introdução}
+  \label{sec:intro-nfstock}
+  
+  Para que o sistema funcione adequadamente o responsável pela emissão das notas deverá entrar no NF-Stock pelo menos uma vez por semana para certificar-se que tudo está ok. Ele deve verificar as notas que ele enviou foram recepcionadas adequadamente, conferir se o sistema encontrou alguma nota de terceiros que ele não recebeu e fazer o envio das notas para o sistema. Além dessas funções básicas o usuário pode ainda verificar as notas de serviços que foram emitidas contra a empresa e ainda as notas de emissão própria. Ao longo desse manual todos esses procedimentos serão explicados.
+  
+  
+  \section{Envio de Notas}
+  \label{sec:envio-notas-nfstock}
+  
+  \subsection{Envio de notas pelo site}
+  \begin{enumerate}
+    \item Para enviar notas, primeiro selecione no menu lateral a aba \itasp{Sistema} \ e depois clique no botão \itasp{Enviar Notas}. \imagem{menu-sistema.PNG}{.4}
+    \item Depois clique no botão \itasp{Adicionar Arquivos}. \imagem{botao-enviar.PNG}{.4}
+    \pagebreak
+    \item Na janela que foi aberta, selecione todos os arquivos XML das notas que foram emitidas e clique em \itasp{Abrir}. \imagem{selecionar-arquivos.PNG}{.6}
+    \item Clique em \itasp{Enviar Todos} e espere até que a operação seja finalizada. \imagem{enviar-todos.PNG}{.6}
+    \item Agora as notas enviadas já devem estar na aba de \itasp{Notas Emitidas}, na seção \ref{sec:notasnfstock} você aprenderá a acessar as notas enviadas.
+  \end{enumerate}
+  
+  \subsection{Envio de notas pelo e-mail}
+  \begin{enumerate}
+    \item Anexar os XMLs em um e-mail.
+    \item Enviar para o email: \textit{nf@nfstock.com.br}.
+    \item As notas devem estar disponíveis no NF-Stock em até 24 horas.
+  \end{enumerate}
+  \textbf{OBS:} Alguns sistemas de emissão de ntoas fazem o envio automático dos XMLs para um e-mail configurado, caso seu sistema possua essa opção, o e-mail que deve ser cadastrado é o \textit{nf@nfstock.com.br}, consulte o suporte do seu sistema.
+  \pagebreak
+  \section{Consultar Notas}
+  \label{sec:notasnfstock}
+  
+  \subsection{Emissão Própria}
+  \begin{enumerate}
+    \item Para visualizar as notas que foram emitidas selecione o no menu lateral \itasp{NFe} \ e depois clique no botão \itasp{Emitidas}. \imagem{menu-nfe.PNG}{.25}
+    \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfe-emit.PNG}{1}
+  \end{enumerate}
+  
+  \subsection{Recebidas}
+  \begin{enumerate}
+    \item Para visualizar as notas que foram recebidas selecione o no menu lateral \itasp{NFe} \ e depois clique no botão \itasp{Recebidas}. \imagem{menu-nfe.PNG}{.25}
+    \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfe-rec.PNG}{1}
+  \end{enumerate}
+  
+  \section{Consultar Serviços}
+  \label{sec:servicos-nfstock}
+  As notas de serviços são puxadas automaticamente pelo sistema dependendo da cidade em que a empresa se encontra. O sistema consegue capturar automaticamente apenas as notas do cliente e de empresas prestadoras de serviço que têm sede na mesma cidade. Logo, caso a empresa esteja localizada em Belo Horizonte, o sistema importará automaticamente as notas emitidas pela empresa e as notas de serviços tomados pela empresa de empresas que tenham sede em Belo Horizonte. Caso você não consiga visualizar suas notas de serviços, favor entrar em contato.
+  
+  \subsection{Prestados}
+  \begin{enumerate}
+    \item Para visualizar as notas de serviços que foram prestados pela empresa selecione o no menu lateral \itasp{NFSe} \ e depois clique no botão \itasp{Emitidas}. \imagem{menu-nfe.PNG}{.2}
+    \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfse-emit.PNG}{.9}
+  \end{enumerate}
+  
+  \subsection{Tomados}
+  \begin{enumerate}
+    \item Para visualizar as notas de serviços que foram prestados pela empresa selecione o no menu lateral \itasp{NFSe} \ e depois clique no botão \itasp{Recebidas}. \imagem{menu-nfe.PNG}{.2}
+    \item Varias notas já devem ser exibidas na tela, para filtrar basta usar as opções disponíveis na tela. \imagem{filtro-nfse-rec.PNG}{.9}
+  \end{enumerate}
+}
+
+\newcommand{\parteCertificado}{
+  \parte{Certificado Digital}
+  \section{Emissão}
+  \label{sec:emit-cert}
+  Para emissão do certificado digital favor entrar em contato com a contabilidade, o setor de \textbf{Processos} (\emailprocessos) está preparado para auxiliar nossos clientes na emissão do certificado.
+  \section{Instalação}
+  \label{sec:install-cert}
+  \textbf{OBS:} após a emissão você receberá da contabilidade o arquivo do certificado, normalmente quando enviamos o certificado já fazemos a instalação, esse procedimento só será necessário caso você deseje instalar o certificado em outra maquina ou tenha formatado seu computador.
+  \begin{enumerate}
+    \item Clique duas vezes no arquivo do certificado. \imagem{cert-img}{1}
+    \item Clique no botão \itasp{Avançar} até que seja solicitada a senha do certificado. Quando enviamos o certificado para nossos clientes a senha está localizada na mesma pasta do arquivo do certificado. Digite a senha no campo solicitado e clique novamente em \itasp{Avançar}. \imagem{senha-cert}{0.5}
+    \item Continue clicando em \itasp{Avançar} para finalizar o procedimento. Após isso o certificado estará disponível para o uso.
+  \end{enumerate}
+}
+
+\newcommand{\parteInfos}{
+  \parte{Informações Complementares}
+  \section{Data de Vencimento de Guias}
+  \begin{center}
+    \rowcolors{2}{gray!50}{gray!30}
+    \begin{tabular}{|P{0.1\linewidth}|P{0.2\linewidth}|P{0.2\linewidth}|P{0.3\linewidth}|}
+      \hline
+      \rowcolor{darkGrey}
+      DIA & GUIA & ORGÃO & DESCRIÇÃO \\
+      \hline
+      até 20 & GPS & Previdência & Pagamento do INSS sobre a folha de pagamento dos empregados e do pró-labore dos sócios. \\
+      05 (prox) & ISSQN & Prefeitura & Tributação municipal: calculado sobre o faturamento mensal dos serviços prestados, aliquota conforme tabela de 2\% a 5\%. \\
+      até 07 & FGTS & Caixa & Fundo de Garantia dos empregados (8\% do salário bruto dos funcionários). \\
+      08 (prox) & DAE & Estado & ICMS: tributo pago sobre as vendas e circulação de mercadoria. \\
+      até 25 & DARF (8109/2172) & Receita Federal & Tributo Federal: calculado com base no faturamento mensal (PIS 0,65\% e COFINS 3\%). \\
+      {\small 31/01; 30/04; 31/07; 31/10} & DARF (2089/2372) & Receita Federal & Tributo Federal: calculado com base no faturamento mensal (IRPJ: 4,8\% ou 2,4\% e CSSL 2.88\% ou 1.08\%). \\
+      \hline
+
+    \end{tabular}
+  \end{center}
+
+  \pagebreak
+  \section{E-mails Pessoal Escritório}
+  \begin{itemize}
+    \item Contadora: \emailandrea
+    \item Financeiro: \emailabelardo
+    \item Gestão:
+    \begin{itemize}
+      \item Gerente Geral: \emaildanielle
+      \item Fiscal e Contábil: \emaildebora
+      \item Processos/Contratos: \emailnatalia
+    \end{itemize}
+    \item Setor Fiscal:
+    \begin{itemize}
+      \item Nikole: \emailfiscalum
+      \item Juciele: \emailfiscaldois
+      \item Mariana: \emailcontabilquatro
+    \end{itemize}
+    \item Setor Contábil:
+    \begin{itemize}
+      \item Rafael: \emailcontabiltres
+      \item Hilda: \emailcontabilum
+    \end{itemize}
+    \item Departamento Pessoal:
+    \begin{itemize}
+      \item Dalila: \emaildpum
+      \item Patrícia: \emaildpdois
+    \end{itemize}
+    \item Contratos/Processos:
+    \begin{itemize}
+      \item Elisângela: \emailprocessos 
+    \end{itemize}
+    \item Arquivo:
+    \begin{itemize}
+      \item Graciliano: \emailarquivo
+    \end{itemize}
+  \end{itemize}
+}
